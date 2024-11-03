@@ -7,28 +7,7 @@ import { CartService } from '../../services/cart.service';
   styleUrl: './comp-c.component.css'
 })
 export class CompCComponent {
-//  searchFilter:string="";
-//  product=[
-//   {  so:1, item:"Book", price:200, disc:'This is latest printed book '},
-//   { so:2, item:"phone", price:20000, disc:'This is latest phone'},
-//   { so:3, item:"vivo", price:12000, disc:'This is latest vivo phone'},
-//   {so:4, item:"Laptop", price:420000, disc:'This is latest version'},
-//   {so:5, item:"phonedisk", price:120000, disc:'This is latest phonedisk'}
-//  ]
 
- 
-
-
-//  constructor(){
-//   console.log('constructor called')
-//  }
-//  ngOnChanges(changes:SimpleChanges): void {
-//   console.log('ngOnChanges called')
-//  }
-//  ngOnInit(): void {
-//   console.log('ngOnInit called')
-  
-//  }
 constructor(private cartService:CartService){}
 states:string[] = ['Bihar'];
 userForm: FormGroup = new FormGroup({
