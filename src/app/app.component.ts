@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { CartService } from './services/cart.service';
-import { Cart2Service } from './services/cart2.service';
  
 
 export default interface Product{
@@ -23,7 +21,7 @@ export class AppComponent {
   title = 'practice';
   toggleCart:boolean = false;
  
-  constructor(public cartService:CartService){ // isko dependency injection
+  constructor(){ // isko dependency injection
   }
   
   cartShow(){
