@@ -1,0 +1,36 @@
+<!-- <p>compo-e works!</p> -->
+<br>
+<br>
+<br>
+<div style=" width: 40vw; background-color: transparent;">
+  <b>Item Iname</b> <input type="text" placeholder="Item Name" [(ngModel)]="name" /> <br>
+ <b>Item Iprice</b><input type="number" placeholder="Price" [(ngModel)]="price" /> <br>
+ <b>Item Idesc</b> <input type="text" placeholder="Description" [(ngModel)]="desc" /> <br>
+  <b>Click for Add</b><button (click)="addDin(name, price, desc)" class="btn btn-success">Add Item</button> <br>
+</div> <br>
+
+  
+<div vinAppCard *ngFor="let item of itemData">
+  <b>Item Iname</b>- {{item.item}} <br>
+  <b>Item IDesc</b>-  {{item.description}} <br>
+  <b>Item Iprice</b>-  {{item.rate}}
+</div> <br>
+<!-- <b>Item Iname</b> <input type="text" placeholder="Item Name" [(ngModel)]="name" /> <br>
+ <b>Item Iprice</b><input type="number" placeholder="Price" [(ngModel)]="price" /> <br>
+ <b>Item Idesc</b> <input type="text" placeholder="Description" [(ngModel)]="desc" /> <br>
+  <b>Click for Add</b><button (click)="addDin(name, price, desc)" class="btn btn-success">Add Item</button> <br> -->
+
+<!-- <div vinAppCard>
+  <h2>Add New Item</h2>
+
+
+
+  <h3>Item List</h3>
+  <ul>
+    <li *ngFor="let item of itemData">
+      <b>Item Iname</b>- {{ item.item }} <br>
+      <b>Item Iprice</b> - {{ item.rate }} <br>
+      <b>Item Idesc</b>   - {{ item.description }}
+    </li>
+  </ul>
+</div> -->

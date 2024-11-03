@@ -1,0 +1,32 @@
+:host nav {
+    background:royalblue;
+    min-height: 90vh;
+    position: absolute;
+}
+
+nav > ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+ul > li {
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 10px;
+}
+
+ul > li:hover {
+    cursor: pointer;
+    background: #ccc;
+    color: #000;
+}
+
+ul > li > a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.active {
+    color: rgb(238, 15, 52);
+}

@@ -1,0 +1,102 @@
+<br> <br> <br>
+
+ 
+
+
+ 
+    
+
+  
+
+ <div style="background-color: bisque; width: 40vw; padding: 40px; border-radius: 20px; " >
+ <form #abc="ngForm" (ngSubmit)="submit(abc)" novalidate="true"> 
+  nameee: <input type="text" name="name"  ngModel required>
+
+  <br> <br>
+   <b>Country:-</b><div *ngFor="let item of chooseCountry">
+    <input type="checkbox" [(ngModel)]="item.select" name="country" 
+    style="margin-left: 50px;">{{item.name}} 
+    
+  </div > 
+
+   <br>
+  <input type="submit" value="submit" [disabled]="abc.form.invalid">
+ </form> <br>
+ <table  >
+  <thead  >
+    <tr>
+     
+      <th style="padding-left: 20px;">Name</th>
+      <th style="padding-left: 70px; padding-right:20px ;" >Country</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let item of submitValue" >
+     
+      <td>{{item.name}}</td>
+      <td style="padding-left: 50px;" >{{item.country}}</td>
+    </tr>
+  </tbody>
+ </table>
+</div>
+<br>
+<!-- <form #aaa="ngForm" (ngSubmit)="dataSubmited(aaa.value)" novalidate="true">
+  <B>name:- </B> <input type="text" name="name">  <br>
+  <b>Class:- </b> <div *ngFor="let item of dataNew.course">
+    <input type="checkbox" name="course">{{item}} 
+  </div>
+  <br>
+  <input type="submit" value="submit">
+</form> -->
+ <hr style="width: 35vw; border: 2px solid red;">
+
+ <div style="width: 35vw; background-color: bisque; padding: 35px; ">
+  <form #vinit="ngForm" (ngSubmit)="dataSubmited(vinit.value)" novalidate="true">
+  <b>Name:- </b> <input type="text" [(ngModel)]="myNewForm.name" required name="name"> <br>
+  <div *ngIf="vinit.form.controls['name']?.errors && vinit.form.controls['name'].untouched" style="color: red; margin-left: 20px;"> Name is required</div>
+   <br> 
+  <select [(ngModel)]="myNewForm.selectState" name="state" style="border-radius: 15px; height: 50px; padding-left: 20px;" required>
+    <option value="item"  *ngFor="let item of myNewForm.state"  >{{item}}</option>
+  </select>
+ <div *ngIf="vinit.form.controls['state']?.errors && vinit.form.controls['state']
+ .pristine" style="color: red; font-size: 20px;">Please select your State 
+
+ </div> <br> <br> 
+ 
+ <b>City :-    </b><input type="text" [(ngModel)]="myNewForm.city" name="city" > <br> <br>
+  <b>Email:- </b> <input type="text"
+   [(ngModel)]="myNewForm.email" name="email"> <br> <br>
+   <b>Discription:- </b> <textarea name="texta" [(ngModel)]="myNewForm.texta" required></textarea> 
+   <div *ngIf="vinit.form.controls['texta']?.errors && vinit.form.controls['texta'].untouched" 
+   style="margin-left: 75px; font-size: 20px; color: indianred;">
+    Write About Your Fav Hobbies</div>
+   <br> <br>
+   
+   <input type="checkbox" [(ngModel)]="myNewForm.blankCheckbox" name="blankCheckbox"  required>
+    <div *ngIf="vinit.form.controls['blankCheckbox']?.errors && vinit.form.controls['blankCheckbox'].untouched"> Read All Line CareFully Then Submit This Box</div> <br> <br>
+
+ <input type="submit" value="submit" [disabled]="vinit.invalid"> 
+</form>
+ </div> <hr style="width: 35vw;">
+  <form #ab="ngForm" (ngSubmit)="dataSubmited(ab.value)" style="width: 35vw; background-color: bisque; padding: 35px;"> 
+     <b>Name :- </b><input type="text" [(ngModel)]="dataNew.infoEmp" name="name"> <br> <br>
+  <b>Course:- </b><div *ngFor="let item of dataNew.course"> 
+    <input type="checkbox" name="course" [value]="item">{{item}} <br> 
+  </div>
+  <input type="submit" value="submit"> <button type="reset" (click)="resetForm(ab)" style="margin-left: 20px;">Reset </button>
+ </form> 
+<hr> 
+
+ <!-- <form #aaa="ngForm" (ngSubmit)="dataSubmited(aaa.value)">
+  <select [(ngModel)]="myNewForm.selectState" name="state" multiple
+ required>
+    <option [value]="item"  *ngFor="let item of myNewForm.state"  >{{item}}</option>
+  </select>
+  {{myNewForm.selectState | json}}
+
+  <input type="submit" value="submit">
+ </form>
+  <br>
+   -->
+
+

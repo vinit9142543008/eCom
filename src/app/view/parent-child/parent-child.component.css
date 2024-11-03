@@ -1,0 +1,34 @@
+
+/* .vinita{
+    margin-left:55px;
+    border: 2px solid grey;
+    margin-top: 0px;
+    padding: 5px 2px;
+    border-left: 3px solid brown;
+    border-radius: 2px;
+    width: 27vw;
+    background-color: moccasin;
+    box-shadow:  5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+} */
+
+
+/* .btn-valid {
+    background-color: green;
+    color: white;
+  }
+  
+ 
+  .btn-invalid {
+    background-color: red;
+    color: white;
+  } */
+  
+  table {
+    border: 1px solid black;
+    border-collapse: collapse; 
+   
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 10px; 
+  }

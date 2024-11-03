@@ -1,0 +1,16 @@
+.main{
+    min-height: auto;
+    /* border: 1px solid royalblue; */
+}
+
+.cart-top{
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background: red;
+    padding: 5px 15px;
+    width: 250px;
+    max-width: 250px;
+    height: 94vh;
+    /* overflow-y: scroll; */
+}

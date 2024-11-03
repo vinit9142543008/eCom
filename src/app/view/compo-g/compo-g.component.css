@@ -1,0 +1,4 @@
+.disabled{
+    background: #ccc !important;
+    pointer-events: none;
+}

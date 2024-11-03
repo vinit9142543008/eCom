@@ -1,0 +1,47 @@
+ <!-- <ul *ngFor="let item of cartItems ">
+  <li style="list-style: none;">
+      <div style="background: royalblue;width: fit-content;display: inline-block;border-radius: 15px; margin: 10px; float: left; ">
+      <h5>{{item?.productCat}}</h5>
+      <p>
+         <b>Product Name </b>: {{item?.pName}} <br>
+         <b>Description </b>: {{item?.desc}} <br>
+         <b>Price </b>: {{item?.price}} <br>
+         <button (click)="removeFromCart(item)" class="btn btn-danger">Remove from Cart
+          <br>
+          
+         </button> 
+         <br>
+      </p>
+      </div>
+      
+  </li>
+
+</ul>
+
+ <h2>Your Cart</h2>
+<ul style="list-style: none;">
+  <li *ngFor="let item of cartItems">
+    {{ item.name }}: {{ item.price | currency:'INR' }} 
+    
+  </li>
+</ul>
+  -->
+
+  <!-- {{cartIserv.cart$ | async | json}} -->
+  <br>
+   <br>
+   <div *ngFor="let item of cartIserv.cart$ |async "  vinAppCard>
+    <img [src]="item.img" style="width: 200px; height: 150px; text-align: center; background-position: center; "> <br>
+    <b>Product Name </b>: {{item.pName}} <br>
+         <b>Description </b>: {{item.desc}} <br>
+         <b>Price </b>: {{item.price}} <br>
+         <hr>
+         <button (click)="removeFroMCart(item)" class="btn btn-danger">REmove</button> <br>
+         <br>
+         <button vinAppBtnPr (click)="qtyHandler(item,item.qty  = item.qty + 1)">+</button> 
+         Qty : {{item.qty}}
+         <button vinAppBtnDng (click)="qtyHandler(item,item.qty = item.qty > 1 ? item.qty - 1 : item.qty)">-</button>
+   </div>
+        
+    
+<!-- {{cartIserv.carts$ | async | json}} -->

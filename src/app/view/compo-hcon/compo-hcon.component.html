@@ -1,0 +1,21 @@
+
+<br>
+
+<p>compo-hcon works!</p>
+
+<!-- <button (click)="dataVal()">+++</button> -->
+<ul>
+    <li *ngFor="let item of objKey(dataB)">
+  {{item}} :  {{dataB[item]}}
+    </li>
+</ul>  
+
+<ul>
+  <li *ngFor="let item of valB">
+   
+    <!-- {{item.val}}:{{item.count}} -->
+     {{item | json}}
+  
+  </li>
+</ul>
+<!-- <input type="text" [(ngModel)]="name">{{name}} -->
