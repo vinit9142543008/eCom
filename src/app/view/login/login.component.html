@@ -1,0 +1,40 @@
+<div class="main-signup">
+    <form (ngSubmit)="login()" [formGroup]="myForm">
+        
+        <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput [formControl]="email" [errorStateMatcher]="matcher"
+                   placeholder="Ex. pat@example.com">
+            @if (email.hasError('email') && !email.hasError('required')) {
+              <mat-error>Please enter a valid email address</mat-error>
+            }
+            @if (email.hasError('required')) {
+              <mat-error>Email is <strong>required</strong></mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput [formControl]="password" [errorStateMatcher]="matcher"
+                   placeholder="Enter Your Password">
+            @if (password.hasError('password') && !password.hasError('required')) {
+              <mat-error>Please enter a valid email address</mat-error>
+            }
+            @if (password.hasError('required')) {
+              <mat-error>password is <strong>required</strong></mat-error>
+            }
+          </mat-form-field>
+        
+
+          <button class="btn btn-primary" type="submit" [disabled]="myForm.invalid">Submit</button>
+
+          <!-- <button class="btn btn-secondary " type="submit" (click)="onLogin()">Onlogin</button> -->
+
+          <button class="btn btn-danger" type="reset">Reset</button>
+         
+         
+      </form> 
+      <div style="font-size: 18px; margin-left: 10vw;">Not registered 
+        <a href="sign-up" routerLink="/signup">SingUp</a></div>
+
+</div>

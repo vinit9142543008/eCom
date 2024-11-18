@@ -1,0 +1,54 @@
+<!-- <p>cart works!</p>
+<a routerLink="/">Products</a> | <a routerLink="/cart">Cart</a>
+<router-outlet></router-outlet> -->
+
+ <!-- <div class="card m-1 p-1" style="width: 18rem; display: inline-block; "  >
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body"  *ngFor="let item of cartItems" >
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text"> {{item.price | currency}}</p>
+    
+    </div>
+  </div>
+  <ng-template #emptyCart>
+    <p>Your cart is empty!</p>
+  </ng-template>   -->
+  
+  
+  <!-- <div>
+    <h1>Shopping Cart</h1>
+    <p>Items in cart: {{ itemCount }}</p>
+    <ul>
+      <li *ngFor="let item of cartItems">
+        <p><strong>{{ item.name }}</strong> - {{ item.price | currency }}</p>
+      </li>
+    </ul>
+  </div> -->
+  <div class="container mt-4">
+    <h2>Your Cart</h2>
+  
+    <div *ngIf="itemCount === 0">
+      <p>Your cart is empty.</p>
+    </div>
+  
+    <div *ngIf="itemCount > 0">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let item of cartItems">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.name }}</h5>
+              <p class="card-text">Price: ${{ item.price }}</p>
+              <button class="btn btn-danger" (click)="removeItem(item)">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="mt-4">
+        <h3>Total Price: ${{ totalPrice }}</h3>
+        <h4>Items in Cart: {{ itemCount }}</h4>
+      </div>
+    </div>
+  </div>
+  
+  

@@ -1,0 +1,54 @@
+
+
+/* Override the bg-light background color */
+.navbar-light.bg-light {
+    background-color: aqua;
+  }
+  
+  /* .navbar-brand:hover{
+    
+   background-color: darkgray;
+   color: brown;
+   font-size: 30px;
+  }
+  .navbar-brand{
+    transition: color 0.3s, background-color 0.3s;
+
+  }
+ .nav-link{
+    transition: color 0.3s, background-color 0.3s;
+    margin-left: 20px;
+ }
+ .nav-link:hover{
+    background-color: darkgray;
+    color: brown;
+    font-size: 25px;
+ } */
+
+.navbar-light.bg-light {
+   background-color: bisque !important;
+   padding-left:20px ; /* Replace with your desired color */
+   /* transition: color 0.3s, background-color 0.3s; */
+   margin-bottom: 15px;
+ }
+ 
+ .navbar-brand:hover{
+   
+  background-color: darkgray;
+  color: brown;
+  font-size: 30px;
+ }
+ .navbar-brand{
+   transition: color 0.3s, background-color 0.3s;
+
+ }
+.nav-link{
+   transition: color 0.3s, background-color 0.3s;
+   margin-left: 20px;
+}
+.nav-link:hover{
+   background-color: darkgray;
+   color: brown;
+   font-size: 25px;
+}
+

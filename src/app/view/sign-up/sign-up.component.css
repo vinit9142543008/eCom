@@ -1,0 +1,16 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .main-signup{
+    margin: 10px 25%;
+    border: 2px solid royalblue;
+    padding: 20px;
+  }

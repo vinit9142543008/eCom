@@ -1,0 +1,93 @@
+<div class="main-signup">
+        
+          <form (ngSubmit)="register(email.value, password.value, name.value, phoneNum.value)" [formGroup]="myForm">
+           
+            <mat-form-field class="example-full-width">
+              <mat-label>Full Name</mat-label>
+              <input type="text" matInput [formControl]="name" [errorStateMatcher]="matcher"
+                     placeholder="Enter your name">
+              @if (name.hasError('name') && !name.hasError('required')) {
+                <mat-error>Please enter a valid email address</mat-error>
+              }
+              @if (name.hasError('required')) {
+                <mat-error>Email is <strong>required</strong></mat-error>
+              }
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput [formControl]="email" [errorStateMatcher]="matcher"
+                       placeholder="Ex. pat@example.com">
+                @if (email.hasError('email') && !email.hasError('required')) {
+                  <mat-error>Please enter a valid email address</mat-error>
+                }
+                @if (email.hasError('required')) {
+                  <mat-error>Email is <strong>required</strong></mat-error>
+                }
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput [formControl]="password" [errorStateMatcher]="matcher"
+                       placeholder="Enter Your Password">
+                @if (password.hasError('password') && !password.hasError('required')) {
+                  <mat-error>Please enter a valid email address</mat-error>
+                }
+                @if (password.hasError('required')) {
+                  <mat-error>password is <strong>required</strong></mat-error>
+                }
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Phone</mat-label>
+                <input type="number" matInput [formControl]="phoneNum" [errorStateMatcher]="matcher"
+                       placeholder="Enter Your Phone Number">
+                @if (phoneNum.hasError('phoneNum') && !phoneNum.hasError('required')) {
+                  <mat-error>Please enter a valid email address</mat-error>
+                }
+                @if (phoneNum.hasError('required')) {
+                  <mat-error>Phone is <strong>required</strong></mat-error>
+                }
+              </mat-form-field>
+
+              <button class="btn btn-primary" type="submit"  [disabled]="myForm.invalid" >Submit</button>
+             <!-- <button class="btn btn-secondary " (click)="updatePassword()">Update Password</button> -->
+              <button class="btn btn-danger" type="reset">Reset</button>
+              
+          </form>
+          <div style="font-size: 18px; margin-left: 10vw;">Already registered <a routerLink="/login">Login</a></div>
+</div>  
+
+<!-- <div class="signup-container">
+  <h2>Sign Up</h2>
+  <form (ngSubmit)="register(email.value, password.value, name.value, phoneNum.value)">
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput [formControl]="name" placeholder="Enter your name" required />
+      <mat-error *ngIf="name.hasError('required')">Name is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput [formControl]="email" placeholder="Enter your email" required />
+      <mat-error *ngIf="email.hasError('required')">Email is required</mat-error>
+      <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" [formControl]="password" placeholder="Enter your password" required />
+      <mat-error *ngIf="password.hasError('required')">Password is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Phone Number</mat-label>
+      <input matInput [formControl]="phoneNum" placeholder="Enter your phone number" required />
+      <mat-error *ngIf="phoneNum.hasError('required')">Phone number is required</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Register</button>
+  </form>
+</div> -->
